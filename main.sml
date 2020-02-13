@@ -1,5 +1,7 @@
 structure Main : sig
+
   val main : unit -> int
+  
 end = struct
 
 structure R = RegEx
