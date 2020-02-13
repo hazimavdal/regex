@@ -9,12 +9,12 @@ end = struct
 structure R = RegEx
 structure P = Parse
 
-fun nullable(R.Epsilon) = R.Epsilon |
-    nullable(R.Phi) = R.Phi |
-    nullable(R.Symbol _) = R.Phi |
-    nullable(R.Or(R1, R2)) = R.Or(nullable(R1), nullable(R2)) |
-    nullable(R.Concat(R1, R2)) = R.Concat(nullable(R1), nullable(R2)) |
-    nullable(R.Star(_)) = R.Epsilon
+fun nullable(R.Epsilon) = R.Epsilon 
+  | nullable(R.Phi) = R.Phi 
+  | nullable(R.Symbol _) = R.Phi 
+  | nullable(R.Or(R1, R2)) = R.Or(nullable(R1), nullable(R2)) 
+  | nullable(R.Concat(R1, R2)) = R.Concat(nullable(R1), nullable(R2)) 
+  | nullable(R.Star(_)) = R.Epsilon
 
 fun brzozowski(a, R.Symbol a') = if a = a' then R.Epsilon else R.Phi 
   | brzozowski(_, R.Epsilon) = R.Phi  
