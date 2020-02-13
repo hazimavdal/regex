@@ -1,0 +1,4 @@
+*/.cm/*
+.vscode/
+bin/
+sml.json

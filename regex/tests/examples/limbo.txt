@@ -1,0 +1,4 @@
+(a*a*a)*a*
+((aaaa)*b)((b*+abab)*b*)
+(a*a)(a*)*+a*aba(a+b)(a+b*(a+b)*)*(a+b*(a+b)*)*(a+b*(a+b)*)*
+(a*a)(a*)*+a*aba(a+bza)(a+b*(a+b)*)*(a+b*(a+b)*)*(a+b*(a+b)*)*
