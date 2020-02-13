@@ -1,6 +1,0 @@
-derive [RegEx] [Symbol] [Order | All]
-
--e  The regular expression to compute the derivative for
--x  Symbol to compute derivative with respect to
--n  Order of derivative
--u  Compute all unique derivatives (-n option ignored)

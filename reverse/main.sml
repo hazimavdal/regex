@@ -6,7 +6,7 @@ end = struct
 
 structure R = RegEx
 
-val usage = foldr (fn (x, y)=> x^"\n"^y ) "" (IO.readlines("usage.txt"))
+val usage = "reverse [RegEx]\n"
 
 fun panic(msg) = 
   let
