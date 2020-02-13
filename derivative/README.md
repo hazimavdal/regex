@@ -15,3 +15,20 @@ The module takes three arguments.
 
 The `Makefile` requires the [MLton](http://mlton.org/) tool. Running `make` inside this folder will produce a stand-alone binary `../bin/derive`.
 
+If you want to run the module within the `smlnj` interactive shell, then use the `sources.cm` file which gathers all the dependencies for this module:
+
+```{bash}
+sml sources.cm
+```
+
+## Examples
+
+```{bash}
+$ bin/derive -e "(aaa)*" -x a -n 1
+aa(aaa)*
+```
+
+```{bash}
+$ bin/derive -e "a" -x b -n 1
+P
+```
