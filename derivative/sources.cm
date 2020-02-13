@@ -1,0 +1,17 @@
+Group
+  structure Token
+  structure RegEx
+  structure Scan
+  structure Parse
+  structure Derivative
+  structure Main
+is
+  $/basis.cm
+  $/smlnj-lib.cm
+  ../regex/token.sml
+  ../regex/regex.sml
+  ../regex/scan.sml
+  ../regex/parse.sml
+  derivative.sml
+  main.sml
+  
