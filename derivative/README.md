@@ -10,9 +10,9 @@ The module takes three arguments.
 
 - `-x`: the symbol to compute the derivative with respect to
 
--`-n`: the order of the derivative to compute. `-n 0` will return the input expression
+- `-n`: the order of the derivative to compute. `-n 0` will return the input expression
 
--`-u`: lists all the unique Brzozowski derivatives for the given expression. If this option is set then `-n` is ignored.
+- `-u`: lists all the unique Brzozowski derivatives for the given expression. If this option is set then `-n` is ignored.
 
 ## Building
 
