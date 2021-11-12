@@ -23,14 +23,14 @@ fun tos (Epsilon) = "E"
   | tos (Star (Symbol a)) = (str a) ^ "*" 
   | tos (Star R1) = "(" ^ tos(R1) ^ ")" ^ "*"
 
-fun prone (Epsilon) = Epsilon 
-    | prone (Phi) = Phi 
-    | prone (Symbol a) = Symbol a  
+fun prune (Epsilon) = Epsilon 
+    | prune (Phi) = Phi 
+    | prune (Symbol a) = Symbol a  
  
-    | prone (Or (R1, R2)) = 
+    | prune (Or (R1, R2)) = 
       let
-        val R1' = prone(R1)
-        val R2' = prone(R2)
+        val R1' = prune(R1)
+        val R2' = prune(R2)
       in
         if R1' = Phi 
           then R2'
@@ -47,10 +47,10 @@ fun prone (Epsilon) = Epsilon
                 Or(R1', R2')
       end
 
-    | prone (Concat (R1, R2)) = 
+    | prune (Concat (R1, R2)) = 
       let
-        val R1' = prone(R1)
-        val R2' = prone(R2)
+        val R1' = prune(R1)
+        val R2' = prune(R2)
       in
         if R1' = Epsilon 
           then R2' 
@@ -67,10 +67,10 @@ fun prone (Epsilon) = Epsilon
                   Concat(R1', R2')
       end
    
-    | prone (Star(Star(R1))) = prone(Star(prone(R1)))
-    | prone (Star R1) =   
+    | prune (Star(Star(R1))) = prune(Star(prune(R1)))
+    | prune (Star R1) =   
       let
-        val R1' = prone(R1)
+        val R1' = prune(R1)
       in
         if R1' = Phi orelse R1' = Epsilon 
           then Epsilon

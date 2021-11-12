@@ -27,7 +27,7 @@ fun brzozowski(a, R.Symbol a') = if a = a' then R.Epsilon else R.Phi
 
   | brzozowski(a, R.Star(R1)) = R.Concat(brzozowski(a, R1), R.Star (R1))
 
-fun nth(0, a, r) = R.prone(r)
+fun nth(0, a, r) = R.prune(r)
   | nth(n, a, r) = nth(n-1, a, brzozowski(a, r)) 
 
 fun first (a, r) = nth(1, a, r)
