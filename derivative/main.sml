@@ -13,7 +13,7 @@ val u2 = "-e  The regular expression to compute the derivative for\n"
 val u3 = "-x  Symbol to compute derivative with respect to\n"
 val u4 = "-n  Order of derivative\n"
 val u5 = "-u  Compute all unique derivatives (-n option ignored)\n"
-val usage = u1 ^ u2 ^ u3 ^ u3 ^ u4 ^ u5
+val usage = u1 ^ u2 ^ u3 ^ u4 ^ u5
 
 fun panic(msg) = 
   let
