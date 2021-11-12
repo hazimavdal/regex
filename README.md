@@ -29,6 +29,10 @@ apt install libgmp-dev
 
 - Run `make`. This will create two binaries, `bin/reverse` and `bin/derive`
 
+# Project Status 
+
+This project is no longer maintained. See my [jare](https://github.com/hazimavdal/jare) for a more formal `regex` implementation using `Elm`.
+
 ## Acknowledgements
 This implementation is based on Professor Timothy Ng's [lecture notes](http://people.cs.uchicago.edu/~timng/280/w20/). The utility file [util/check.sml](https://github.com/hazimavdal/regex/blob/master/util/check.sml) is borrowed from  Professor Adam Shaw's [CMSC 22100](http://people.cs.uchicago.edu/~adamshaw/cmsc22100-2018/index.html
 ).
