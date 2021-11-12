@@ -29,6 +29,24 @@ apt install libgmp-dev
 
 - Run `make`. This will create two binaries, `bin/reverse` and `bin/derive`
 
+# Example Usage
+
+- Compute a first-order derivative
+
+```
+$ make
+$ bin/derive -e "aa|b" -x a -n 1
+# Output: a|b
+```
+
+- Reverse an expression
+
+```
+$ make
+$ bin/reverse "a|b"
+# Output: b|a
+```
+
 # Project Status 
 
 This project is no longer maintained. See my [jare](https://github.com/hazimavdal/jare) for a more formal `regex` implementation using `Elm`.
