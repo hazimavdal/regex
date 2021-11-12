@@ -8,7 +8,7 @@ structure R = RegEx
 structure D = Derivative
 structure I = IO
 
-val u1 = "derive [RegEx] [Symbol] [Order | All]\n\n"
+val u1 = "derive [-e RegEx] [-x Symbol] [-n NUM | -u]\n\n"
 val u2 = "-e  The regular expression to compute the derivative for\n"
 val u3 = "-x  Symbol to compute derivative with respect to\n"
 val u4 = "-n  Order of derivative\n"
